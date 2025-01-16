@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 
-//Circular Queue implementation using Arrays
+//Circular Queue implementation using Linkedlist
 typedef struct node{
     int data;
     struct node *next;
@@ -11,7 +11,7 @@ typedef struct node{
 struct node *front = 0;
 struct node *rear = 0;
 
-//
+//Insertion of node
 void enqueue(){
     struct node *newnode;
     newnode = (struct node *)malloc(sizeof(struct node));
@@ -29,6 +29,7 @@ void enqueue(){
     }
 }
 
+//to delete node
 void dequeue(){
     struct node *temp;
     temp=front;
@@ -46,6 +47,7 @@ void dequeue(){
     }
 }
 
+//to return front element as output
 void peek(){
     if(front==0 && rear==0){
         printf("Queue is empty!\n");
@@ -54,6 +56,7 @@ void peek(){
     }
 }
 
+//Fuction to display output
 void display(){
     struct node *temp;
     temp = front;
